@@ -55,6 +55,14 @@ public class Task5_regularAndDiscountPrices_2 {
         String mainPageRegularPriceLine = mainPageRegularPrice.getCssValue("text-decoration-line");
         String mainPageDiscountPriceFont = mainPageDiscountPrice.getCssValue("font-weight");
 
+        Assert.assertTrue(mainPageProductNameText.contains("Yellow Duck"));
+        Assert.assertTrue(mainPageRegularPriceText.contains("$20"));
+        Assert.assertTrue(mainPageDiscountPriceText.contains("$18"));
+        Assert.assertEquals(mainPageRegularPriceColor, "rgba(119, 119, 119, 1)");
+        Assert.assertEquals(mainPageDiscountPriceColor, "rgba(204, 0, 0, 1)");
+        Assert.assertEquals(mainPageRegularPriceLine, "line-through");
+        Assert.assertEquals(mainPageDiscountPriceFont, "bold");
+
         mainPageProductName.click();
 
         WebElement itemPageProductName = driver.findElement(By.xpath(".//*[@id='box-product']/div[1]/h1[contains(text(), 'Yellow Duck')]"));
