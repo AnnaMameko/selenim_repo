@@ -114,8 +114,8 @@ public class Task6_addNewItem {
 
     }
 
-   /// @After
-    //public void stop(){
-      //  driver.quit();
-   // }
+     @After
+        public void stop(){
+        driver.quit();
+   }
 }
