@@ -80,8 +80,7 @@ public class Task6_addNewItem {
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource("qwerty.png").getFile());
         System.out.println(file.getAbsolutePath());
-        driver.findElement(By.name("new_images[]")).sendKeys(file.getAbsolutePath());
-        Thread.sleep(9000);
+        driver.findElement(By.name("new_images[]")).sendKeys(file.getAbsolutePath().replaceAll("%20", " "));
 
         //Information tab
         driver.findElement(By.xpath(".//*[@id='main']/form/div/ul/li[2]/a")).click();
