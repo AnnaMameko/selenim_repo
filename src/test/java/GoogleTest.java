@@ -38,8 +38,9 @@ public class GoogleTest {
     public void google_test() throws InterruptedException {
         driver.get("https://google.com");
         driver.findElement(By.name("q")).sendKeys("webdriver");
+        Thread.sleep(9000);
         driver.findElement(By.name("btnG")).click();
-        Thread.sleep(3000);
+        Thread.sleep(9000);
     }
 
     @After
@@ -47,3 +48,16 @@ public class GoogleTest {
         driver.quit();
     }
 }
+
+
+        /*driver.findElement(By.xpath(".//*[@id='app-']/a/span[2][contains(text(), 'Appearance')]")).click();
+        driver.findElement(By.tagName("h1"));
+        driver.findElement(By.xpath(".//*[@id='doc-template']/a/span[contains(text(), 'Template')]")).click();*/
+
+         /*JavascriptExecutor executor = (JavascriptExecutor)driver;
+        executor.executeScript("document.addEventListener(\"DOMContentLoaded\", function(){ return " +
+                "document.querySelector(\"Appearence\",\"Template\" ) });");*/
+
+         /*for (WebElement el: mainList) {
+                 List<WebElement> subList = el.findElements(By.cssSelector(".docs li"));
+        }*/
